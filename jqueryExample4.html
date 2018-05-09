@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.ancestors * { 
+	    display: block;
+	    border: 2px solid lightgrey;
+	    color: lightgrey;
+	    padding: 5px;
+	    margin: 15px;
+	}
+</style>
+	<title></title>
+	<script src="jquery-3.2.1.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+	<script>
+		$(document).ready(function(){
+	    	//$("span").parent().css({"color": "red", "border": "2px solid red"});		//returns the direct parent element of each <span> elements
+	    	//$("span").parents("ul").css({"color": "red", "border": "2px solid blue"});	//returns all ancestors of all <span> elements that are <ul> elements
+	    	$("span").parentsUntil("div").css({"color": "red", "border": "2px solid orange"});	//returns all ancestor elements between a <span> and a <div> element
+	});
+</script>
+	
+</head>
+<body>
+	<div class="ancestors">
+	  <div style="width:500px;">div (great-grandparent)
+	    <ul>ul (grandparent)  
+	      <li>li (direct parent)
+	        <span>span</span>
+	      </li>
+	    </ul>   
+	  </div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-3.2.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<style>
+.siblings * { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+</style>
+</head>
+<body>
+    <body class="siblings">
+        <div>div (parent)
+          <p>p</p>
+          <span>span</span>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <p>p</p>
+        </div>
+<script>
+    $(document).ready(function(){
+        $("h2").siblings().css({"color": "red", "border": "2px solid red"});    
+        //$("h2").siblings("p");      //returns all sibling elements of <h2> that are <p> elements
+        //$("h2").next();     //returns the next sibling of <h2>
+        //$("h2").nextAll();  //returns all next sibling elements of <h2>
+        //$("h2").nextUntil("h6");    //returns all sibling elements between a <h2> and a <h6> element
+    });
+
+</script>
+</body>
+</html>
+</body>
+</html>

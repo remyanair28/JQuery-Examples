@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.2.1.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#button1').click(function(){
+				alert('Hello')
+			});
+
+			$('#button2').css('background-color', 'yellow');
+
+			$('p').css('color', 'red');
+
+			$('.small').css('border', '5px solid red');
+		});
+	</script>
+</head>
+<body>
+	<input type="button" id="button1" value="Click"><br><br>
+	<input type="button" id="button2" value="Id Selector"><br><br>
+	<p>Element Selector</p>
+	<p>Element Selector1</p>
+	<span class="small">Class Selector</span>
+</body>
+</html>
